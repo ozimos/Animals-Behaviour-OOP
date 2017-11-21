@@ -1,7 +1,7 @@
 {
   "name": "animals-behaviour-oop",
   "version": "1.0.0",
-  "description": "",
+  "description": " ",
   "main": "index.js",
   "scripts": {
     "test": "mocha --require babel-register --require babel-polyfill --recursive test/appTest.js"
