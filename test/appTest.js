@@ -55,3 +55,20 @@ describe('Test methods on subclasses ', () => {
     });
   });
 });
+
+describe('Overide superclass constructor', () => {
+  const behaviour = { Sound: 'Bark', Move: 'Chase cats at ' };
+  const animal = new Animal('Bingo', 4, 5, behaviour);
+
+  it('test identify method', () => {
+    assert.equal(animal.identify(), 'Dinosaur');
+  });
+
+  it('test speak method', () => {
+    assert.equal(animal.speak(), 'Bark 4 times');
+  });
+
+  it('test move method', () => {
+    assert.equal(animal.move(), 'Chase cats at 5 meters per second');
+  });
+});
