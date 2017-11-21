@@ -12,7 +12,7 @@ export class Animal {
     return `A sound ${this.callNumber} times`;
   }
   move() {
-    return `A speed of ${this.speed} meters per second `;
+    return `A speed of ${this.speed} meters per second`;
   }
 }
 

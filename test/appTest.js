@@ -18,6 +18,10 @@ describe('Test superclass methods', () => {
   it('test speak method', () => {
     assert.equal(animal.speak(), 'A sound 4 times');
   });
+
+  it('test move method', () => {
+    assert.equal(animal.move(), 'A speed of 5 meters per second');
+  });
 });
 
 describe('Test methods on subclasses ', () => {
@@ -28,7 +32,11 @@ describe('Test methods on subclasses ', () => {
     });
 
     it('test speak method', () => {
-      assert.equal(animal.speak(), 'A sound 4 times');
+      assert.equal(animal.speak(), 'Shout 4 times');
+    });
+
+    it('test move method', () => {
+      assert.equal(animal.move(), 'Walk 5 meters per second');
     });
   });
 
@@ -39,7 +47,11 @@ describe('Test methods on subclasses ', () => {
     });
 
     it('test speak method', () => {
-      assert.equal(animal.speak(), 'A sound 4 times');
+      assert.equal(animal.speak(), 'Sing 4 times');
+    });
+
+    it('test move method', () => {
+      assert.equal(animal.move(), 'Fly 5 meters per second');
     });
   });
 });
