@@ -1,17 +1,21 @@
-import chai from 'chai';
-import app from '../src/app';
-
-const {
+import {
   assert
-} = chai.assert;
+} from 'chai';
+import {
+  Animal,
+  Mammal,
+  Bird
+} from '../src/app';
 
-describe('app to test as', () => {
-  const result = app();
-  it('app should return a class', () => {
-    assert.equal(result, 'hello');
-  }); // we put app() becos we checking for app()----goto terminal type npm run test
-  nimal = new app.Animal();
-  it('it should be a string', () => {
-    assert.typeOf(result, 'string');
+
+describe('Test superclass methods', () => {
+  const animal = new Animal('Dinosaur', 4, 5);
+
+  it('test identify method', () => {
+    assert.equal(animal.identify(), 'Dinosaur');
+  });
+
+  it('test speak method', () => {
+    assert.equal(animal.speak(), 'A sound 4 times');
   });
 });

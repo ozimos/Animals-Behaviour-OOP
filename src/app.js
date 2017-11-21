@@ -1,26 +1,28 @@
-export default class Animal {
+export class Animal {
   constructor(name, callNumber, speed) {
     this.name = name;
     this.callNumber = callNumber;
     this.speed = speed;
   }
 
-  sayHi() {
-    alert(this.name);
+  identify() {
+    return `${this.name}`;
   }
   speak() {
-    return `A string`;
+    return `A sound ${this.callNumber} times`;
   }
   move() {
-    return `A call`;
+    return `A speed of ${this.speed} meters per second `;
   }
 }
-class Mammal extends Animal {
+
+export class Mammal extends Animal {
   constructor(name, callNumber, speed) {
     super(name, callNumber, speed);
   }
 }
-class Birds extends Animal {
+
+export class Birds extends Animal {
   constructor(name, callNumber, speed) {
     super(name, callNumber, speed);
   }
