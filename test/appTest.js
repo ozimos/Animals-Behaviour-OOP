@@ -4,7 +4,8 @@ import {
 import {
   Animal,
   Mammal,
-  Birds
+  Birds,
+  Dog
 } from '../src/app';
 
 
@@ -57,11 +58,11 @@ describe('Test methods on subclasses ', () => {
 });
 
 describe('Overide superclass constructor', () => {
-  const behaviour = { Sound: 'Bark', Move: 'Chase cats at ' };
-  const animal = new Animal('Bingo', 4, 5, behaviour);
+  const behaviour = { sound: 'Bark', move: 'Chase cats at ' };
+  const animal = new Dog ('Bingo', 4, 5, behaviour);
 
   it('test identify method', () => {
-    assert.equal(animal.identify(), 'Dinosaur');
+    assert.equal(animal.identify(), 'Bingo');
   });
 
   it('test speak method', () => {
