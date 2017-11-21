@@ -17,7 +17,6 @@ export class Animal {
 }
 
 export class Mammal extends Animal {
-
   speak() {
     return `Shout ${this.callNumber} times`;
   }
@@ -28,7 +27,6 @@ export class Mammal extends Animal {
 
 
 export class Birds extends Animal {
-
   speak() {
     return `Sing ${this.callNumber} times`;
   }
