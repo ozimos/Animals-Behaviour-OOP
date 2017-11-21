@@ -59,7 +59,7 @@ describe('Test methods on subclasses ', () => {
 
 describe('Overide superclass constructor', () => {
   const behaviour = { sound: 'Bark', move: 'Chase cats at ' };
-  const animal = new Dog ('Bingo', 4, 5, behaviour);
+  const animal = new Dog('Bingo', 4, 5, behaviour);
 
   it('test identify method', () => {
     assert.equal(animal.identify(), 'Bingo');

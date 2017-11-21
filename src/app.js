@@ -17,9 +17,7 @@ export class Animal {
 }
 
 export class Mammal extends Animal {
-  constructor(name, callNumber, speed) {
-    super(name, callNumber, speed);
-  }
+
   speak() {
     return `Shout ${this.callNumber} times`;
   }
@@ -30,13 +28,25 @@ export class Mammal extends Animal {
 
 
 export class Birds extends Animal {
-  constructor(name, callNumber, speed) {
-    super(name, callNumber, speed);
-  }
+
   speak() {
     return `Sing ${this.callNumber} times`;
   }
   move() {
     return `Fly ${this.speed} meters per second`;
+  }
+}
+
+export class Dog extends Mammal {
+  constructor(name, callNumber, speed, { sound, move }) {
+    super(name, callNumber, speed);
+    this.sound = sound;
+    this.move = move;
+  }
+  speak() {
+    return `${this.sound} ${this.callNumber} times`;
+  }
+  move() {
+    return `${this.move} ${this.speed} meters per second`;
   }
 }
