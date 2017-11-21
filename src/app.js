@@ -20,10 +20,23 @@ export class Mammal extends Animal {
   constructor(name, callNumber, speed) {
     super(name, callNumber, speed);
   }
+  speak() {
+    return `Shout ${this.callNumber} times`;
+  }
+  move() {
+    return `Walk ${this.speed} meters per second`;
+  }
 }
+
 
 export class Birds extends Animal {
   constructor(name, callNumber, speed) {
     super(name, callNumber, speed);
+  }
+  speak() {
+    return `Sing ${this.callNumber} times`;
+  }
+  move() {
+    return `Fly ${this.speed} meters per second`;
   }
 }
