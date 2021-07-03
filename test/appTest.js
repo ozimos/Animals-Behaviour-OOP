@@ -1,15 +1,75 @@
-import chai from 'chai';
-import app from '../src/app';
+import {
+  assert
+} from 'chai';
+import {
+  Animal,
+  Mammal,
+  Birds,
+  Dog
+} from '../src/app';
 
-const assert = chai.assert;
 
-describe('app to test as', () => {
-  const result = app();
-  it('app should return hello', () => {
-    assert.equal(result, 'hello');
-  }); // we put app() becos we checking for app()----goto terminal type npm run test
+describe('Test superclass methods', () => {
+  const animal = new Animal('Dinosaur', 4, 5);
 
-  it('it should be a string', () => {
-    assert.typeOf(result, 'string');
+  it('test identify method', () => {
+    assert.equal(animal.identify(), 'Dinosaur');
+  });
+
+  it('test speak method', () => {
+    assert.equal(animal.speak(), 'A sound 4 times');
+  });
+
+  it('test move method', () => {
+    assert.equal(animal.move(), 'A speed of 5 meters per second');
+  });
+});
+
+describe('Test methods on subclasses ', () => {
+  describe('Mammals', () => {
+    const animal = new Mammal('Dinosaur', 4, 5);
+    it('test identify method', () => {
+      assert.equal(animal.identify(), 'Dinosaur');
+    });
+
+    it('test speak method', () => {
+      assert.equal(animal.speak(), 'Shout 4 times');
+    });
+
+    it('test move method', () => {
+      assert.equal(animal.move(), 'Walk 5 meters per second');
+    });
+  });
+
+  describe('Birds', () => {
+    const animal = new Birds('Dinosaur', 4, 5);
+    it('test identify method', () => {
+      assert.equal(animal.identify(), 'Dinosaur');
+    });
+
+    it('test speak method', () => {
+      assert.equal(animal.speak(), 'Sing 4 times');
+    });
+
+    it('test move method', () => {
+      assert.equal(animal.move(), 'Fly 5 meters per second');
+    });
+  });
+});
+
+describe('Overide superclass constructor', () => {
+  const behaviour = { sound: 'Bark', move: 'Leap' };
+  const animal = new Dog('Bingo', 4, 5, behaviour);
+
+  it('test identify method', () => {
+    assert.equal(animal.identify(), 'Bingo');
+  });
+
+  it('test speak method', () => {
+    assert.equal(animal.speak(), 'Bark 4 times');
+  });
+
+  it('test move method', () => {
+    assert.equal(animal.move(), 'Leap 5 meters per second');
   });
 });

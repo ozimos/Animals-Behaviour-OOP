@@ -1,11 +1,11 @@
-#### What does this PR do?
+#### Pull request shows commits on branch classes  to be merged into branch develop
 
-#### Description of Task to be completed?
+#### Demonstrates an OOP implementation that models a real-world scenario/problem, while taking advantage of inheritance, encapsulation, polymorphism and the other OOP concepts
 
-#### How should this be manually tested?
+#### npm test
 
 #### Any background context you want to provide?
 
-#### What are the relevant pivotal tracker stories? (If applicable)
+#### pivotal tracker stories - not applicable
 
-#### Screenshots (If applicable)
+#### Screenshots - not applicable
